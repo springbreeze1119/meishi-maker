@@ -1,0 +1,277 @@
+{\rtf1\ansi\ansicpg932\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="ja">\
+<head>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0    <meta name="robots" content="noindex, nofollow"> <!-- \uc0\u26908 \u32034 \u12456 \u12531 \u12472 \u12531 \u12395 \u30331 \u37682 \u12373 \u12379 \u12394 \u12356 \u35373 \u23450  -->\
+    <meta charset="UTF-8">\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0     <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>\uc0\u31119 \u23713 \u30476 \u35328 \u35486 \u32884 \u35226 \u22763 \u20250  \u23398 \u29983 \u12469 \u12509 \u12540 \u12479 \u12540 \u21517 \u21050 \u20316 \u25104 </title>\
+    <style>\
+        /* \uc0\u20840 \u20307 \u12473 \u12479 \u12452 \u12523  */\
+        body \{\
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;\
+            margin: 0;\
+            padding: 20px;\
+            background-color: #f4f6f9;\
+            color: #333;\
+        \}\
+\
+        .container \{\
+            max-width: 800px;\
+            margin: 0 auto;\
+            background: white;\
+            padding: 30px;\
+            border-radius: 12px;\
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);\
+        \}\
+\
+        h1 \{\
+            font-size: 20px;\
+            color: #1a365d;\
+            border-bottom: 2px solid #3182ce;\
+            padding-bottom: 10px;\
+            margin-top: 0;\
+        \}\
+\
+        .form-group \{\
+            margin-bottom: 15px;\
+        \}\
+\
+        label \{\
+            display: block;\
+            font-weight: bold;\
+            margin-bottom: 5px;\
+            font-size: 14px;\
+        \}\
+\
+        input, select \{\
+            width: 100%;\
+            padding: 10px;\
+            border: 1px solid #cbd5e0;\
+            border-radius: 6px;\
+            font-size: 14px;\
+            box-sizing: border-box;\
+        \}\
+\
+        button \{\
+            background-color: #3182ce;\
+            color: white;\
+            border: none;\
+            padding: 12px 20px;\
+            font-size: 16px;\
+            font-weight: bold;\
+            border-radius: 6px;\
+            cursor: pointer;\
+            width: 100%;\
+            transition: background 0.2s;\
+        \}\
+\
+        button:hover \{\
+            background-color: #2b6cb0;\
+        \}\
+\
+        /* \uc0\u12503 \u12524 \u12499 \u12517 \u12540 \u12456 \u12522 \u12450  */\
+        .preview-title \{\
+            margin-top: 30px;\
+            font-weight: bold;\
+            color: #4a5568;\
+        \}\
+\
+        /* A4\uc0\u21360 \u21047 \u29992 \u12524 \u12452 \u12450 \u12454 \u12488 \u65288 \u30011 \u38754 \u34920 \u31034 \u12539 \u21360 \u21047 \u20849 \u36890 \u65289  */\
+        #print-area \{\
+            display: grid;\
+            grid-template-columns: repeat(2, 91mm);\
+            grid-template-rows: repeat(6, 55mm);\
+            gap: 0;\
+            width: 182mm;\
+            height: 330mm;\
+            margin: 20px auto;\
+            background: white;\
+            border: 1px solid #ccc;\
+            box-sizing: border-box;\
+        \}\
+\
+        /* \uc0\u21517 \u21050 1\u26522 \u12398 \u12487 \u12470 \u12452 \u12531  */\
+        .card \{\
+            width: 91mm;\
+            height: 55mm;\
+            box-sizing: border-box;\
+            border: 1px dashed #e2e8f0; /* \uc0\u12459 \u12483 \u12488 \u29992 \u12398 \u34180 \u12356 \u22659 \u30028 \u32218  */\
+            padding: 12mm 8mm 8mm 8mm;\
+            position: relative;\
+            background-color: #fff;\
+            display: flex;\
+            flex-direction: column;\
+            justify-content: space-between;\
+        \}\
+\
+        /* \uc0\u12473 \u12479 \u12452 \u12522 \u12483 \u12471 \u12517 \u12539 \u30495 \u38754 \u30446 \u12373 \u12434 \u24341 \u12365 \u31435 \u12390 \u12427 \u32294 \u12398 \u12450 \u12463 \u12475 \u12531 \u12488 \u12521 \u12452 \u12531 \u65288 \u12459 \u12521 \u12540 \u12539 \u30333 \u40658 \u21452 \u26041 \u23550 \u24540 \u12398 \u28611 \u32058 /\u40658 \u65289  */\
+        .card::before \{\
+            content: '';\
+            position: absolute;\
+            left: 0;\
+            top: 0;\
+            bottom: 0;\
+            width: 4px;\
+            background-color: #1a365d;\
+        \}\
+\
+        .card-header \{\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: flex-start;\
+        \}\
+\
+        .auth-text \{\
+            font-size: 7pt;\
+            color: #4a5568;\
+            font-weight: bold;\
+            letter-spacing: 0.5px;\
+        \}\
+\
+        /* \uc0\u12525 \u12468 \u37096 \u20998 \u65288 \u20206 \u12398 SVG\u12450 \u12452 \u12467 \u12531 \u65306 \u26412 \u30058 \u26178 \u12399 img\u12479 \u12464 \u12395 \u24046 \u12375 \u26367 \u12360 \u21487 \u33021 \u65289  */\
+        .logo-placeholder \{\
+            width: 25px;\
+            height: 25px;\
+            opacity: 0.8;\
+        \}\
+\
+        .card-body \{\
+            margin-top: 5px;\
+        \}\
+\
+        .school-name \{\
+            font-size: 8pt;\
+            color: #718096;\
+            margin-bottom: 2px;\
+        \}\
+\
+        .student-title \{\
+            font-size: 7pt;\
+            color: #4a5568;\
+            margin-bottom: 4px;\
+        \}\
+\
+        .name \{\
+            font-size: 15pt;\
+            font-weight: bold;\
+            color: #111;\
+            letter-spacing: 1px;\
+        \}\
+\
+        .card-footer \{\
+            border-top: 1px solid #e2e8f0;\
+            padding-top: 6px;\
+            font-size: 7.5pt;\
+            color: #4a5568;\
+            text-align: right;\
+        \}\
+\
+        /* \uc0\u21360 \u21047 \u29992 CSS\u35373 \u23450  */\
+        @media print \{\
+            body \{\
+                background: none;\
+                padding: 0;\
+            \}\
+            .container, h1, .form-group, button, .preview-title \{\
+                display: none; /* \uc0\u20837 \u21147 \u12501 \u12457 \u12540 \u12512 \u12394 \u12393 \u12434 \u21360 \u21047 \u26178 \u12395 \u38750 \u34920 \u31034 \u12395 \u12377 \u12427  */\
+            \}\
+            #print-area \{\
+                border: none;\
+                margin: 0;\
+            \}\
+            .card \{\
+                border: 1px solid #ddd; /* \uc0\u21360 \u21047 \u26178 \u12398 \u35009 \u26029 \u30446 \u23433 \u32218  */\
+                page-break-inside: avoid;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+<div class="container">\
+    <h1>\uc0\u31119 \u23713 \u30476 \u35328 \u35486 \u32884 \u35226 \u22763 \u20250  \u23398 \u29983 \u12469 \u12509 \u12540 \u12479 \u12540 \u21517 \u21050 \u12472 \u12455 \u12493 \u12524 \u12540 \u12479 \u12540 </h1>\
+    \
+    <div class="form-group">\
+        <label for="input-school">\uc0\u23398 \u26657 \u21517 </label>\
+        <select id="input-school" oninput="updateCards()">\
+            <option value="\uc0\u31119 \u23713 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u23554 \u38272 \u23398 \u26657 ">\u31119 \u23713 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u23554 \u38272 \u23398 \u26657 </option>\
+            <option value="\uc0\u23554 \u38272 \u23398 \u26657 \u26611 \u24029 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u23398 \u38498 ">\u23554 \u38272 \u23398 \u26657 \u26611 \u24029 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u23398 \u38498 </option>\
+            <option value="\uc0\u40635 \u29983 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u22823 \u23398 \u26657 ">\u40635 \u29983 \u12522 \u12495 \u12499 \u12522 \u12486 \u12540 \u12471 \u12519 \u12531 \u22823 \u23398 \u26657 </option>\
+            <option value="\uc0\u12381 \u12398 \u20182 \u12539 \u12295 \u12295 \u22823 \u23398  \u21307 \u30274 \u25216 \u34899 \u23398 \u37096 ">\u12381 \u12398 \u20182 \u65288 \u33258 \u30001 \u35352 \u20837 \u29992 \u12398 \u12480 \u12511 \u12540 \u65289 </option>\
+        </select>\
+    </div>\
+\
+    <div class="form-group">\
+        <label for="input-name">\uc0\u27663 \u21517 </label>\
+        <input type="text" id="input-name" placeholder="\uc0\u35328 \u35486  \u22826 \u37070 " value="\u35328 \u35486  \u22826 \u37070 " oninput="updateCards()">\
+    </div>\
+\
+    <div class="form-group">\
+        <label for="input-email">\uc0\u12513 \u12540 \u12523 \u12450 \u12489 \u12524 \u12473 </label>\
+        <input type="email" id="input-email" placeholder="rehab-student@example.com" value="rehab-student@example.com" oninput="updateCards()">\
+    </div>\
+\
+    <button onclick="window.print()">\uc0\u21517 \u21050 \u12434 \u21360 \u21047 \u12377 \u12427  (A4\u12539 12\u26522 )</button>\
+    \
+    <div class="preview-title">\uc0\u12304 \u21360 \u21047 \u12452 \u12513 \u12540 \u12472 \u12503 \u12524 \u12499 \u12517 \u12540 \u12305 </div>\
+</div>\
+\
+<!-- A4\uc0\u12469 \u12452 \u12474 \u12398 \u20013 \u12395 \u21517 \u21050 12\u26522 \u12434 \u37197 \u32622 \u12377 \u12427 \u12456 \u12522 \u12450  -->\
+<div id="print-area">\
+    <!-- JavaScript\uc0\u12391 \u12371 \u12371 \u12395 12\u26522 \u12398 \u21517 \u21050 \u12434 \u33258 \u21205 \u29983 \u25104 \u12375 \u12414 \u12377  -->\
+</div>\
+\
+<script>\
+    // \uc0\u21517 \u21050 \u12398 HTML\u12486 \u12531 \u12503 \u12524 \u12540 \u12488 \u65288 \u12525 \u12468 \u12395 \u12399 \u20206 \u12398 SVG\u12510 \u12540 \u12463 \u12434 \u20837 \u12428 \u12390 \u12356 \u12414 \u12377 \u65289 \
+    const logoSvg = `<svg class="logo-placeholder" viewBox="0 0 24 24" fill="none" stroke="#1a365d" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z" opacity="0.5"/></svg>`;\
+\
+    function generateCards() \{\
+        const printArea = document.getElementById('print-area');\
+        printArea.innerHTML = '';\
+\
+        const school = document.getElementById('input-school').value;\
+        const name = document.getElementById('input-name').value;\
+        const email = document.getElementById('input-email').value;\
+\
+        // A4 1\uc0\u26522 \u12395 \u21454 \u12417 \u12427 \u12383 \u12417 12\u20491 \u12398 \u12459 \u12540 \u12489 \u12434 \u29983 \u25104 \
+        for (let i = 0; i < 12; i++) \{\
+            const card = document.createElement('div');\
+            card.className = 'card';\
+            card.innerHTML = `\
+                <div class="card-header">\
+                    <span class="auth-text">\uc0\u31119 \u23713 \u30476 \u35328 \u35486 \u32884 \u35226 \u22763 \u20250  \u20844 \u35469 \u12469 \u12509 \u12540 \u12479 \u12540 </span>\
+                    $\{logoSvg\}\
+                </div>\
+                <div class="card-body">\
+                    <div class="school-name">$\{school\}</div>\
+                    <div class="student-title">\uc0\u23398 \u29983 \u12469 \u12509 \u12540 \u12479 \u12540 </div>\
+                    <div class="name">$\{name\}</div>\
+                </div>\
+                <div class="card-footer">\
+                    Email: $\{email\}\
+                </div>\
+            `;\
+            printArea.appendChild(card);\
+        \}\
+    \}\
+\
+    // \uc0\u20837 \u21147 \u20516 \u12364 \u22793 \u26356 \u12373 \u12428 \u12383 \u12425 \u12522 \u12450 \u12523 \u12479 \u12452 \u12512 \u12395 \u12503 \u12524 \u12499 \u12517 \u12540 \u12434 \u26356 \u26032 \
+    function updateCards() \{\
+        generateCards();\
+    \}\
+\
+    // \uc0\u21021 \u22238 \u36215 \u21205 \u26178 \
+    generateCards();\
+</script>\
+\
+</body>\
+</html>}
